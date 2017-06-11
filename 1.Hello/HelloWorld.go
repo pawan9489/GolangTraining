@@ -4,22 +4,84 @@ import (
 	"fmt"
 	//"github.com/pawan9489/GolangTraining/1.Hello/StringUtil"
 	//"github.com/pawan9489/GolangTraining/1.Hello/PKG_Folder"
-	"net/http"
-	"io/ioutil"
+	//"net/http"
+	//"io/ioutil"
+	"reflect"
 )
-
-//import (
-//	"fmt"
-//	"github.com/pawan9489/GolangTraining/1.Hello/StringUtil"
-//)
 
 const abc string = "asd"
 const q = 90
+const (
+	_ = iota
+	test = iota
+	KB = 1 << (iota * 10)
+	MB = 1 << (iota * 10)
+)
+const (
+	A = iota
+	B
+	C
+)
 
+
+const (
+	Apple, Banana = 2*iota + 1, 2*iota + 2
+	Cherimoya, Durian
+	Elderberry, Fig
+)
 
 func main() {
 	//fmt.Printf("The factorial is %d", fact(60))
 	fmt.Println("Start GO")
+	fmt.Println(test)
+	fmt.Println(KB)
+	fmt.Println(MB)
+	fmt.Printf("%b\n",KB)
+	fmt.Printf("%b\n",MB)
+	fmt.Println(A)
+	fmt.Println(B)
+	fmt.Println(C)
+	fmt.Println(test)
+
+	fmt.Println()
+	fmt.Println(Apple)
+	fmt.Println(Banana)
+	fmt.Println(Cherimoya)
+	fmt.Println(Durian)
+	fmt.Println(Elderberry)
+	fmt.Println(Fig)
+	fmt.Println()
+
+	x := 30
+	y := x + 50
+	fmt.Println(x,y)
+	fmt.Printf("%T - %T \n", x,y)
+
+	//a := 30
+	//b := a + 50.5
+	//fmt.Println(x,y)
+	//fmt.Printf("%T - %T \n", a,b)
+
+	abc := 'b'
+	fmt.Printf("%T\n",abc)
+	fmt.Println(reflect.TypeOf(abc))
+
+	var uns int = -32
+	fmt.Println(uns)
+
+	fmt.Println()
+	fmt.Println()
+	fmt.Println()
+
+	var str string = "My Name is Pawan Kumar"
+	fmt.Println(str[3])
+	fmt.Printf("%d\n",&str)
+	fmt.Println(len(str))
+	var myName string = "Pawan Kumar"
+	fmt.Println(len(myName))
+	fmt.Println(myName[:4])
+
+
 	//StringUtil.ConcatString(StringUtil.MyName)
 	//fmt.Printf("%-d %b %o %#x % X %q", 333, 333, 333, 333, 333, 333)
 	//var abc int = 33
@@ -64,11 +126,11 @@ func main() {
 	//fmt.Println(x)
 	//fmt.Println("-------")
 
-	res,_ := http.Get("http://www.google.com/")
-	page,_ := ioutil.ReadAll(res.Body)
-
-	res.Body.Close()
-	fmt.Printf("%s", page)
+	//res,_ := http.Get("http://www.google.com/")
+	//page,_ := ioutil.ReadAll(res.Body)
+	//
+	//res.Body.Close()
+	//fmt.Printf("%s", page)
 
 }
 
