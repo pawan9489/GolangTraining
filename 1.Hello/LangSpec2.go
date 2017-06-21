@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main()  {
+func main() {
 	//a := 42
 	//fmt.Println(&a)
 	//var b* int = &a

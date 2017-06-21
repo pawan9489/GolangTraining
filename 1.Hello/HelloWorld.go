@@ -12,17 +12,16 @@ import (
 const abc string = "asd"
 const q = 90
 const (
-	_ = iota
+	_    = iota
 	test = iota
-	KB = 1 << (iota * 10)
-	MB = 1 << (iota * 10)
+	KB   = 1 << (iota * 10)
+	MB   = 1 << (iota * 10)
 )
 const (
 	A = iota
 	B
 	C
 )
-
 
 const (
 	Apple, Banana = 2*iota + 1, 2*iota + 2
@@ -36,8 +35,8 @@ func main() {
 	fmt.Println(test)
 	fmt.Println(KB)
 	fmt.Println(MB)
-	fmt.Printf("%b\n",KB)
-	fmt.Printf("%b\n",MB)
+	fmt.Printf("%b\n", KB)
+	fmt.Printf("%b\n", MB)
 	fmt.Println(A)
 	fmt.Println(B)
 	fmt.Println(C)
@@ -54,8 +53,8 @@ func main() {
 
 	x := 30
 	y := x + 50
-	fmt.Println(x,y)
-	fmt.Printf("%T - %T \n", x,y)
+	fmt.Println(x, y)
+	fmt.Printf("%T - %T \n", x, y)
 
 	//a := 30
 	//b := a + 50.5
@@ -63,7 +62,7 @@ func main() {
 	//fmt.Printf("%T - %T \n", a,b)
 
 	abc := 'b'
-	fmt.Printf("%T\n",abc)
+	fmt.Printf("%T\n", abc)
 	fmt.Println(reflect.TypeOf(abc))
 
 	var uns int = -32
@@ -75,12 +74,11 @@ func main() {
 
 	var str string = "My Name is Pawan Kumar"
 	fmt.Println(str[3])
-	fmt.Printf("%d\n",&str)
+	fmt.Printf("%d\n", &str)
 	fmt.Println(len(str))
 	var myName string = "Pawan Kumar"
 	fmt.Println(len(myName))
 	fmt.Println(myName[:4])
-
 
 	//StringUtil.ConcatString(StringUtil.MyName)
 	//fmt.Printf("%-d %b %o %#x % X %q", 333, 333, 333, 333, 333, 333)

@@ -1,4 +1,5 @@
 package main
+
 import (
 	"fmt"
 	"strconv"
@@ -17,8 +18,8 @@ func main() {
 	fmt.Println(k)
 
 	count := 0
-	for z:= i ; z <= j; z++ {
-		if calcDays(z,k) {
+	for z := i; z <= j; z++ {
+		if calcDays(z, k) {
 			count++
 		}
 	}
@@ -29,9 +30,11 @@ func main() {
 	fmt.Println(s)
 	n := 50
 	switch n {
-	case 0 : fmt.Println(0)
-	case 1 : fmt.Println(2)
-	default :
+	case 0:
+		fmt.Println(0)
+	case 1:
+		fmt.Println(2)
+	default:
 		s := generatePattern(n)
 		fmt.Println(sumSlice(s))
 	}
@@ -39,26 +42,26 @@ func main() {
 }
 
 func generatePattern(n int) []int {
-	aSlice := []int {2,3}
-	for i:=1; i<n; i++ {
+	aSlice := []int{2, 3}
+	for i := 1; i < n; i++ {
 		temp := aSlice[i] + i
 		aSlice = append(aSlice, temp)
 	}
 	return aSlice
 }
 
-func sumSlice(n []int)int {
+func sumSlice(n []int) int {
 	sum := 0
-	for _,v := range n {
+	for _, v := range n {
 		sum += v
 	}
 	return sum
 }
 
-func calcDays(n int, k int)bool{
-	rev,_ := strconv.Atoi(reverseString(strconv.Itoa(n)))
+func calcDays(n int, k int) bool {
+	rev, _ := strconv.Atoi(reverseString(strconv.Itoa(n)))
 	fmt.Println(rev)
-	if (n-rev) % k == 0 {
+	if (n-rev)%k == 0 {
 		return true
 	}
 	return false
@@ -71,5 +74,3 @@ func reverseString(s string) string {
 	}
 	return string(chars)
 }
-
-

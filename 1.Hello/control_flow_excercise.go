@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main()  {
+func main() {
 	//var name string = "Pawan Kumar"
 	//var fname string
 	//var lname string
@@ -34,14 +34,14 @@ func main()  {
 	//	}
 	//}
 
-	fmt.Printf("%T \n",temp)
+	fmt.Printf("%T \n", temp)
 
 }
 
-func temp(n int, _ int) int{
+func temp(n int, _ int) int {
 	sum := 0
-	for i:=1;i<n;i++{
-		if i % 3 == 0 || i % 5 == 0 {
+	for i := 1; i < n; i++ {
+		if i%3 == 0 || i%5 == 0 {
 			sum += i
 		}
 	}
