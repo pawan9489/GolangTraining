@@ -1,8 +1,8 @@
 package main
 
 import (
-	"math"
 	"fmt"
+	"math"
 )
 
 type shape interface {
@@ -25,16 +25,16 @@ func (c circle) area() float64 {
 	return math.Pi * c.radius * c.radius
 }
 
-func main()  {
+func main() {
 	var s shape
 	fmt.Println(s)
-	fmt.Printf("%T\n",s)
+	fmt.Printf("%T\n", s)
 	s = square{4}
 	fmt.Println(s)
 	fmt.Println(s.area())
-	fmt.Printf("%T\n",s)
+	fmt.Printf("%T\n", s)
 	s = circle{10}
 	fmt.Println(s)
 	fmt.Println(s.area())
-	fmt.Printf("%T\n",s)
+	fmt.Printf("%T\n", s)
 }

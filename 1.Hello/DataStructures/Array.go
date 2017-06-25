@@ -2,9 +2,9 @@ package DataStructures
 
 import "fmt"
 
-func Arrys()  {
+func Arrys() {
 	x := [4]int{}
 	y := []int{}
-	fmt.Printf("%T\n",x)
-	fmt.Printf("%T\n",y)
+	fmt.Printf("%T\n", x)
+	fmt.Printf("%T\n", y)
 }
