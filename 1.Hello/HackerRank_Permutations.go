@@ -2,26 +2,30 @@ package main
 
 import (
 	"fmt"
-	"runtime"
 )
 
 type example struct {
-	flag bool
+	flag    bool
 	counter int16
-	pi float32
+	pi      float32
 }
 
-func main()  {
-	x := 1 << 60
-	fmt.Printf("%T \n",x)
+func main() {
+	x := []int{1, 2, 4}
+	fmt.Printf("%T \n", x)
+	fmt.Printf("%T \n", &x)
 	fmt.Println(x)
-	fmt.Println(runtime.GOARCH)
-	var e1 example
-	fmt.Println(e1)
-	const (
-		A = 2 * iota + 3
-		B
-		C
-	)
-	fmt.Println(A,B,C)
+	fmt.Println(&x)
+	y := &x
+	fmt.Println(y)
+	z := *y
+	fmt.Println(z)
+	z[0] = 43
+	fmt.Printf("%T \n", z)
+	fmt.Println(x)
+	a1 := [2]int{1, 2}
+	a2 := [2]int{1, 5}
+	fmt.Println(a1)
+	a1 = a2
+	fmt.Println(a1)
 }
