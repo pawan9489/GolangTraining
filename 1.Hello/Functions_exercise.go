@@ -33,5 +33,5 @@ func exercise3(n ...int) int {
 //exercise4 -> true
 
 func exercise5(n ...int) {
-
+	
 }
